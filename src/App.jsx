@@ -9,16 +9,14 @@ import Home from "@/pages/Home";
 import Analysis from "@/pages/Analysis";
 
 function App() {
-
   return (
     <>
-      <Router>
+      <Router basename={import.meta.env.DEV ? "/" : "/my-app/"}>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/analysis" element={<Analysis />} />
         </Routes>
       </Router>
-
     </>
   );
 }
