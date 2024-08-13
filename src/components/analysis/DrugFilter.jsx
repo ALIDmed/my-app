@@ -25,7 +25,7 @@ const DrugFilter = () => {
     filterData(data, newFilters, setAnalysisData);
   };
 
-  console.log(analysisData);
+
   return (
     <Select
       options={data.map((drug) => ({
@@ -44,7 +44,7 @@ const DrugFilter = () => {
           primary: "black",
         },
       })}
-      className="w-52 focus:ring-4 ring-inset max-w-[240px] m-0"
+      className="w-full focus:ring-4 ring-inset m-0"
     />
   );
 };

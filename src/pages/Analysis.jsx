@@ -2,6 +2,10 @@ import Navbar from "@/components/Navbar";
 import AnalysisSidebar from "@/components/analysis/AnalysisSidebar";
 import { createContext, useState } from "react";
 import { data as demoData } from "../../data/demo_data";
+import DrugsBarChart from "@/components/analysis/DrugsBarChart";
+import ChartsContainer from "@/components/analysis/ChartsContainer";
+import DrugsComparaison from "@/components/analysis/DrugsComparaison";
+import LaboComparaison from "@/components/analysis/LaboComparaison";
 
 export const AnalysisContext = createContext();
 
@@ -29,8 +33,11 @@ const Analysis = () => {
         }}
       >
         <Navbar />
-        <div className="p-0 font-inter px-[20px] flex flex-row">
-          <AnalysisSidebar />
+        <div className="w-screen flex justify-center px-4 lg:px-0 mt-28">
+          <div className="w-full flex flex-col space-y-12 max-w-[1350px]">
+            <DrugsComparaison />
+            <LaboComparaison />
+          </div>
         </div>
       </AnalysisContext.Provider>
     </>

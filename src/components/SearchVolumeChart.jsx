@@ -1,4 +1,4 @@
-"use client";
+
 import { Area, AreaChart, CartesianGrid, XAxis } from "recharts";
 import {
   ChartContainer,
@@ -8,7 +8,7 @@ import {
 
 const chartConfig = {
   search_volume: {
-    label: "Search Volume: ",
+    label: "Search Volume:",
     color: "#4770e8",
   },
 };
@@ -35,8 +35,8 @@ export function SearchVolumeChart({ monthly_search_volume }) {
           padding="no-gap"
         />
         <ChartTooltip
-          cursor={false}
-          content={<ChartTooltipContent indicator="dot" />}
+          cursor={true}
+          content={<ChartTooltipContent hideLabel />}
         />
         <Area
           dataKey="search_volume"

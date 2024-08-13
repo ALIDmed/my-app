@@ -5,7 +5,7 @@ import { calculateGrowth } from "../../utils.js/index";
 
 const CardsGrid = ({ data }) => {
   const { expanded } = useContext(AppContext);
-  console.log(data);
+
   return (
     <div
       className={`w-full grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 mt-20 ${

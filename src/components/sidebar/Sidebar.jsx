@@ -11,8 +11,8 @@ import LaboFilter from "./Filters/LaboFilter";
 const Sidebar = () => {
   const { expanded, setExpanded } = useContext(AppContext);
   return (
-    <aside className="h-screen fixed top-0 left-0 z-10">
-      <nav className="h-full flex flex-col bg-white border-r shadow-sm">
+    <aside className="h-screen fixed top-0 left-0 z-10 overflow-y-auto">
+      <nav className="h-full flex flex-col bg-white border-r shadow-">
         <div className="p-4 pb-2 flex justify-between items-center">
           <img
             src={logo}
