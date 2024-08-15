@@ -28,10 +28,10 @@ const CardComponent = ({
           <div className="font-bold">{drug_name}</div>
           <div className="flex flex-row items-center justify-end">
             <div>
-              <div className="font-bold text-[#4770e8]">
+              <div className="font-bold text-[#4770e8] text-lg">
                 {formatNumber(search_volume)}
               </div>
-              <div className="text-xs lg:text-sm text-gray-500">Volume</div>
+              <div className="text-xs text-gray-500">Volume</div>
             </div>
             <div className="ml-5">
               <div
@@ -43,9 +43,9 @@ const CardComponent = ({
                     : "text-green-600"
                 }`}
               >
-                <div className="font-bold">
+                <div className="font-bold text-lg">
                   {growth}
-                  {"X"}
+                  {"%"}
                 </div>
                 {growth == 1 ? (
                   <AudioWaveform />
@@ -55,7 +55,7 @@ const CardComponent = ({
                   <TrendingUp />
                 )}
               </div>
-              <div className="text-xs lg:text-sm text-gray-500">Growth</div>
+              <div className="text-xs text-gray-500">Growth</div>
             </div>
           </div>
         </div>

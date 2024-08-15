@@ -14,7 +14,7 @@ const Navbar = () => {
           Analysis
         </Link>
         <Link
-          to="faq"
+          to="/faq"
           className="hover:font-semibold transition-all ease-in-out"
         >
           FAQ

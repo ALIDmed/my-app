@@ -36,7 +36,7 @@ const Analysis = () => {
         <div className="w-screen flex justify-center px-4 lg:px-0 mt-28">
           <div className="w-full flex flex-col space-y-12 max-w-[1350px]">
             <DrugsComparaison />
-            <LaboComparaison />
+            {/* <LaboComparaison /> */}
           </div>
         </div>
       </AnalysisContext.Provider>

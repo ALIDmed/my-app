@@ -1,12 +1,8 @@
 import "./App.css";
-import CardsGrid from "./components/CardsGrid";
-import Sidebar from "./components/sidebar/Sidebar";
-import { createContext, useState } from "react";
-import { data as demoData } from "../data/demo_data";
-import Navbar from "./components/Navbar";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "@/pages/Home";
 import Analysis from "@/pages/Analysis";
+import Faq from "./pages/Faq";
 
 function App() {
   return (
@@ -15,6 +11,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/analysis" element={<Analysis />} />
+          <Route path="/faq" element={<Faq />} />
         </Routes>
       </Router>
     </>

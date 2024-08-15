@@ -25,9 +25,9 @@ export const calculateGrowth = (monthyl_search_volume) => {
   }
 
   if (growth == 1) {
-    return parseInt(growth);
+    return parseInt(growth*100);
   } else {
-    return growth.toFixed(1);
+    return (growth*100).toFixed(1);
   }
 };
 

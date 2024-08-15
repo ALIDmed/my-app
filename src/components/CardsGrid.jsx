@@ -8,7 +8,7 @@ const CardsGrid = ({ data }) => {
 
   return (
     <div
-      className={`w-full grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 mt-20 ${
+      className={`w-full grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 mt-20 mb-20 ${
         expanded ? "ml-[280px]" : "ml-16"
       }`}
     >
