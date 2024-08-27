@@ -17,18 +17,21 @@ export const calculateGrowth = (monthyl_search_volume) => {
   }
   let growth;
   const lastMonth = monthyl_search_volume[monthyl_search_volume.length - 1];
-  const firstMonth = monthyl_search_volume[0];
+  let firstMonth;
+
+  for (let i = 0; i < monthyl_search_volume.length; i++) {
+    if (monthyl_search_volume[i].search_volume != 0) {
+      firstMonth = monthyl_search_volume[i];
+      break;
+    }
+  }
+
   if (firstMonth.search_volume > lastMonth.search_volume) {
     growth = (firstMonth.search_volume / lastMonth.search_volume) * -1;
   } else {
     growth = lastMonth.search_volume / firstMonth.search_volume;
   }
-
-  if (growth == 1) {
-    return parseInt(growth*100);
-  } else {
-    return (growth*100).toFixed(1);
-  }
+  return (growth * 100).toFixed(1);
 };
 
 export const month_to_num = (month) => {

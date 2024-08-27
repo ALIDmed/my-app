@@ -17,7 +17,7 @@ const Faq = () => {
           {faq.map((item, index) => (
             <AccordionItem value={index +1}>
             <AccordionTrigger>{item.question}</AccordionTrigger>
-            <AccordionContent>
+            <AccordionContent style={{ whiteSpace: 'pre-wrap' }}>
               {item.answer}
             </AccordionContent>
           </AccordionItem>
