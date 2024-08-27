@@ -31,7 +31,10 @@ export const calculateGrowth = (monthyl_search_volume) => {
   } else {
     growth = lastMonth.search_volume / firstMonth.search_volume;
   }
-  return (growth * 100).toFixed(1);
+  if (growth === 1) {
+    return 1;
+  }
+  return parseInt(growth * 100);
 };
 
 export const month_to_num = (month) => {
